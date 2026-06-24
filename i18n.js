@@ -107,7 +107,7 @@ const I18N = {
     /* ---- software page ---- */
     "sw.intro": "These are small tools I build in my spare time — usually vibe-coded with AI assistance, refined by hand, and shared because they're useful to me. More coming soon.",
     "sw.proj.tag": "vibe-coded",
-    "sw.proj.more": "View project →",
+    "sw.proj.more": "Download →",
     "sw.proj.soon": "Coming soon",
     "sw.proj.empty.t": "First project coming soon",
     "sw.proj.empty.d": "I'm tidying up my first few tools to publish here. Check back shortly — or reach out if you're curious.",
@@ -172,7 +172,15 @@ const I18N = {
     ],
 
     /* ---- software projects data ---- */
-    "_projects": [],
+    "_projects": [
+      {
+        title: "MarkFlow",
+        desc: "A compact Markdown editor built with vibe coding for my own writing workflow — a calmer alternative to expensive, overbuilt commercial tools.",
+        icon: "M",
+        stack: ["Electron", "Markdown", "KaTeX", "macOS arm64"],
+        url: "https://github.com/decodermu/decodermu.github.io/releases/download/markflow-v0.1.2/MarkFlow-0.1.2-arm64.dmg"
+      }
+    ],
 
     /* ---- cooking recipes data ---- */
     "_recipes": []
@@ -281,7 +289,7 @@ const I18N = {
     /* ---- software page ---- */
     "sw.intro": "这些是我在业余时间做的小工具——大多是用 AI 辅助 vibe coding 出来的，再手工打磨，因为自己用得上所以分享出来。后续会陆续更新。",
     "sw.proj.tag": "vibe-coded",
-    "sw.proj.more": "查看项目 →",
+    "sw.proj.more": "下载 →",
     "sw.proj.soon": "敬请期待",
     "sw.proj.empty.t": "第一个项目即将上线",
     "sw.proj.empty.d": "我正在整理即将发布的几个小工具，稍后就会出现在这里——感兴趣的话也可以直接联系我。",
@@ -346,7 +354,15 @@ const I18N = {
     ],
 
     /* ---- software projects data ---- */
-    "_projects": [],
+    "_projects": [
+      {
+        title: "MarkFlow",
+        desc: "一个用 vibe coding 做出来的 Markdown 编辑器，主要服务自己的写作流程，用来替代一些收费昂贵、体验不佳的商业软件。",
+        icon: "M",
+        stack: ["Electron", "Markdown", "KaTeX", "macOS arm64"],
+        url: "https://github.com/decodermu/decodermu.github.io/releases/download/markflow-v0.1.2/MarkFlow-0.1.2-arm64.dmg"
+      }
+    ],
 
     /* ---- cooking recipes data ---- */
     "_recipes": []
