@@ -38,16 +38,16 @@ const I18N = {
     "portal.ck.d": "Original recipes I've developed and tested.",
 
     /* ---- page heroes ---- */
-    "page.exp.kicker": "03 · Career",
+    "page.exp.kicker": "Career",
     "page.exp.title": "Experience",
     "page.exp.desc": "Where I've studied, what I've worked on, and the tools I use.",
-    "page.res.kicker": "02 · Academic",
+    "page.res.kicker": "Academic",
     "page.res.title": "Research",
     "page.res.desc": "Computational structural biology, protein design & publications.",
-    "page.sw.kicker": "04 · Building",
+    "page.sw.kicker": "Building",
     "page.sw.title": "Software",
     "page.sw.desc": "Side projects and small tools — mostly vibe-coded, built for fun and utility.",
-    "page.ck.kicker": "05 · Kitchen",
+    "page.ck.kicker": "Kitchen",
     "page.ck.title": "Cooking",
     "page.ck.desc": "Original recipes developed and tested in my own kitchen.",
 
@@ -220,16 +220,16 @@ const I18N = {
     "portal.ck.d": "我研发并实测过的原创菜谱。",
 
     /* ---- page heroes ---- */
-    "page.exp.kicker": "03 · 履历",
+    "page.exp.kicker": "履历",
     "page.exp.title": "经历",
     "page.exp.desc": "在哪里求学、做过什么、用什么工具。",
-    "page.res.kicker": "02 · 学术",
+    "page.res.kicker": "学术",
     "page.res.title": "研究",
     "page.res.desc": "计算结构生物学、蛋白质设计与发表论文。",
-    "page.sw.kicker": "04 · 创造",
+    "page.sw.kicker": "创造",
     "page.sw.title": "软件",
     "page.sw.desc": "业余项目和小工具——大多是 vibe coding 出来的，好玩又好用。",
-    "page.ck.kicker": "05 · 厨房",
+    "page.ck.kicker": "厨房",
     "page.ck.title": "下厨",
     "page.ck.desc": "我在自家厨房研发并实测过的原创菜谱。",
 
