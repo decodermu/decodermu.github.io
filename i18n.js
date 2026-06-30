@@ -168,6 +168,20 @@ const I18N = {
         title: "Recent force field strategies for intrinsically disordered proteins",
         venue: "JCIM · 2021",
         url: "https://doi.org/10.1021/acs.jcim.0c01198"
+      },
+      {
+        n: "07",
+        authors: "<span class=\"me\">Mu J</span>, Lai L.",
+        title: "PSFF-PTM: A Coarse-Grained Force-Field Parameter Patch for Modeling Post-Translational Modification Effects on Biomolecular Condensates",
+        venue: "JCTC · 2026",
+        url: "https://doi.org/10.1021/acs.jctc.6c00469"
+      },
+      {
+        n: "08",
+        authors: "Yang Y, <span class=\"me\">Mu J</span>, Wang Y, et al.",
+        title: "Protein IDR linkers regulate overall protein conformation and phase separation",
+        venue: "CRPS · 2025",
+        url: "https://doi.org/10.1016/j.xcrp.2025.102964"
       }
     ],
 
@@ -350,6 +364,20 @@ const I18N = {
         title: "Recent force field strategies for intrinsically disordered proteins",
         venue: "JCIM · 2021",
         url: "https://doi.org/10.1021/acs.jcim.0c01198"
+      },
+      {
+        n: "07",
+        authors: "<span class=\"me\">Mu J</span>, Lai L.",
+        title: "PSFF-PTM: A Coarse-Grained Force-Field Parameter Patch for Modeling Post-Translational Modification Effects on Biomolecular Condensates",
+        venue: "JCTC · 2026",
+        url: "https://doi.org/10.1021/acs.jctc.6c00469"
+      },
+      {
+        n: "08",
+        authors: "Yang Y, <span class=\"me\">Mu J</span>, Wang Y, 等.",
+        title: "Protein IDR linkers regulate overall protein conformation and phase separation",
+        venue: "CRPS · 2025",
+        url: "https://doi.org/10.1016/j.xcrp.2025.102964"
       }
     ],
 
