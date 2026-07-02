@@ -179,7 +179,7 @@
     const href = a.getAttribute("href");
     const isActive =
       (currentFile === "" || currentFile === "index.html") ? (href === "index.html" || href === "./" || href === "/")
-      : href === currentFile || (currentFile.startsWith("project-") && href === "software.html");
+      : href === currentFile || (currentFile.startsWith("project-") && href === "project.html");
     if (isActive) a.classList.add("active");
     a.addEventListener("click", () => {
       if (menuToggle) menuToggle.classList.remove("open");

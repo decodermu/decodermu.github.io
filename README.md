@@ -18,7 +18,7 @@ junximu.github.io/
 ├── index.html          # About — simplified landing page + portal to other pages
 ├── experience.html     # Education + research timeline + technical skills
 ├── research.html       # Citation stats + research interests + publications
-├── software.html       # Vibe-coded side projects (rendered from i18n.js)
+├── project.html        # Vibe-coded side projects (rendered from i18n.js)
 ├── cooking.html        # Original recipes (rendered from i18n.js)
 ├── style.css           # shared tech-style dark theme
 ├── i18n.js             # EN / ZH dictionaries + publications + projects + recipes data
@@ -59,7 +59,7 @@ The included `CNAME` contains `junximu.me`. To use it: buy the domain, point DNS
 ```bash
 cd /Users/mujunxi/ZCodeProject/junximu.github.io
 python3 -m http.server 8000
-# open http://127.0.0.1:8000/  (visit /experience.html, /research.html, /software.html, /cooking.html)
+# open http://127.0.0.1:8000/  (visit /experience.html, /research.html, /project.html, /cooking.html)
 ```
 
 ## ✏️ Editing content
