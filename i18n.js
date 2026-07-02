@@ -9,7 +9,7 @@ const I18N = {
     "nav.about": "About",
     "nav.experience": "Experience",
     "nav.research": "Research",
-    "nav.software": "Software",
+    "nav.software": "Projects",
     "nav.cooking": "Cooking",
     "nav.lang": "中文",
 
@@ -32,8 +32,8 @@ const I18N = {
     "portal.exp.d": "Education, research timeline & technical skills.",
     "about.portal.res.t": "Research",
     "portal.res.d": "Computational biology, publications & citations.",
-    "about.portal.sw.t": "Software",
-    "portal.sw.d": "Small tools I've vibe-coded in my spare time.",
+    "about.portal.sw.t": "Projects",
+    "portal.sw.d": "Software and research tools I've built.",
     "about.portal.ck.t": "Cooking",
     "portal.ck.d": "Original recipes I've developed and tested.",
 
@@ -45,8 +45,8 @@ const I18N = {
     "page.res.title": "Research",
     "page.res.desc": "Computational structural biology, protein design & publications.",
     "page.sw.kicker": "Building",
-    "page.sw.title": "Software",
-    "page.sw.desc": "Side projects and small tools — mostly vibe-coded, built for fun and utility.",
+    "page.sw.title": "Projects",
+    "page.sw.desc": "Software and research tools built for practical use.",
     "page.ck.kicker": "Kitchen",
     "page.ck.title": "Cooking",
     "page.ck.desc": "Original recipes developed and tested in my own kitchen.",
@@ -105,12 +105,30 @@ const I18N = {
     "res.pubs.all": "Google Scholar →",
 
     /* ---- software page ---- */
-    "sw.intro": "These are small tools I build in my spare time — usually vibe-coded with AI assistance, refined by hand, and shared because they're useful to me. More coming soon.",
+    "sw.intro": "A collection of software and research tools I build, refine, and use in my own work.",
     "sw.proj.tag": "vibe-coded",
-    "sw.proj.more": "Download →",
+    "sw.proj.more": "View →",
     "sw.proj.soon": "Coming soon",
+    "sw.proj.updated": "Updated",
+    "sw.sort.label": "Sort by",
+    "sw.sort.updated": "Last updated",
+    "sw.sort.name": "Name",
     "sw.proj.empty.t": "First project coming soon",
     "sw.proj.empty.d": "I'm tidying up my first few tools to publish here. Check back shortly — or reach out if you're curious.",
+    "proj.kicker": "Project",
+    "proj.back": "← Back to projects",
+    "proj.overview": "Overview",
+    "proj.screenshot": "Homepage screenshot",
+    "proj.download": "Download",
+    "proj.emelia.tagline": "Protein LLPS interaction analysis and sequence design.",
+    "proj.emelia.desc": "Emelia (Empirical Model for Energy-based LLPS Interaction Analysis) is a desktop protein analysis platform. It provides single- and two-sequence PTM annotation and scoring, Emelia-guided IDP sequence design, and access to related molecular grammar tools.",
+    "proj.emelia.mac": "macOS · Apple Silicon · v1.0.4",
+    "proj.emelia.win": "Windows · x64 · v1.0.4",
+    "proj.emelia.note": "For academic use only; no commercial applications.",
+    "proj.markflow.tagline": "A compact, local-first Markdown editor.",
+    "proj.markflow.desc": "MarkFlow is a focused Markdown editor for writing and reading local documents. It includes source and rich editing modes, live preview, KaTeX formulas, tables, code blocks, light and dark themes, bilingual interface support, and optional AI-assisted document translation.",
+    "proj.markflow.mac": "macOS · Apple Silicon · v0.1.2",
+    "proj.markflow.note": "Documents can be written locally without an API key; translation is optional.",
 
     /* ---- cooking page ---- */
     "ck.intro": "A growing collection of original recipes I've developed and tested at home. Most are weeknight-friendly and built around technique rather than precise measurement.",
@@ -190,9 +208,18 @@ const I18N = {
       {
         title: "MarkFlow",
         desc: "A compact Markdown editor built with vibe coding for my own writing workflow — a calmer alternative to expensive, overbuilt commercial tools.",
-        icon: "M",
+        logo: "assets/projects/markflow-logo.png",
         stack: ["Electron", "Markdown", "KaTeX", "macOS arm64"],
-        url: "https://github.com/decodermu/decodermu.github.io/releases/download/markflow-v0.1.2/MarkFlow-0.1.2-arm64.dmg"
+        updated: "2026-06-24",
+        url: "project-markflow.html"
+      },
+      {
+        title: "Emelia",
+        desc: "A protein sequence LLPS interaction analysis platform with PTM scoring, two-sequence analysis, and IDP sequence design.",
+        logo: "assets/projects/emelia-logo.png",
+        stack: ["Protein LLPS", "PTM", "IDP Design", "macOS & Windows"],
+        updated: "2026-07-02",
+        url: "project-emelia.html"
       }
     ],
 
@@ -205,7 +232,7 @@ const I18N = {
     "nav.about": "关于",
     "nav.experience": "经历",
     "nav.research": "研究",
-    "nav.software": "软件",
+    "nav.software": "项目",
     "nav.cooking": "下厨",
     "nav.lang": "EN",
 
@@ -228,8 +255,8 @@ const I18N = {
     "portal.exp.d": "教育背景、研究时间线与技术技能。",
     "about.portal.res.t": "研究",
     "portal.res.d": "计算生物学、论文与引用。",
-    "about.portal.sw.t": "软件",
-    "portal.sw.d": "业余 vibe coding 写的小工具。",
+    "about.portal.sw.t": "项目",
+    "portal.sw.d": "我开发的软件与科研工具。",
     "about.portal.ck.t": "下厨",
     "portal.ck.d": "我研发并实测过的原创菜谱。",
 
@@ -241,8 +268,8 @@ const I18N = {
     "page.res.title": "研究",
     "page.res.desc": "计算结构生物学、蛋白质设计与发表论文。",
     "page.sw.kicker": "创造",
-    "page.sw.title": "软件",
-    "page.sw.desc": "业余项目和小工具——大多是 vibe coding 出来的，好玩又好用。",
+    "page.sw.title": "项目",
+    "page.sw.desc": "为实际需求开发的软件与科研工具。",
     "page.ck.kicker": "厨房",
     "page.ck.title": "下厨",
     "page.ck.desc": "我在自家厨房研发并实测过的原创菜谱。",
@@ -301,12 +328,30 @@ const I18N = {
     "res.pubs.all": "Google Scholar →",
 
     /* ---- software page ---- */
-    "sw.intro": "这些是我在业余时间做的小工具——大多是用 AI 辅助 vibe coding 出来的，再手工打磨，因为自己用得上所以分享出来。后续会陆续更新。",
+    "sw.intro": "这里收录了我开发、持续打磨并用于日常工作的软件与科研工具。",
     "sw.proj.tag": "vibe-coded",
-    "sw.proj.more": "下载 →",
+    "sw.proj.more": "查看 →",
     "sw.proj.soon": "敬请期待",
+    "sw.proj.updated": "更新于",
+    "sw.sort.label": "排序",
+    "sw.sort.updated": "最近更新",
+    "sw.sort.name": "名称",
     "sw.proj.empty.t": "第一个项目即将上线",
     "sw.proj.empty.d": "我正在整理即将发布的几个小工具，稍后就会出现在这里——感兴趣的话也可以直接联系我。",
+    "proj.kicker": "项目",
+    "proj.back": "← 返回项目",
+    "proj.overview": "项目简介",
+    "proj.screenshot": "主页截图",
+    "proj.download": "下载",
+    "proj.emelia.tagline": "蛋白质 LLPS 相互作用分析与序列设计。",
+    "proj.emelia.desc": "Emelia（Empirical Model for Energy-based LLPS Interaction Analysis）是一款桌面端蛋白质分析平台，提供单序列与双序列 PTM 注释和评分、Emelia 引导的 IDP 序列设计，以及相关分子语法工具入口。",
+    "proj.emelia.mac": "macOS · Apple 芯片 · v1.0.4",
+    "proj.emelia.win": "Windows · x64 · v1.0.4",
+    "proj.emelia.note": "仅限学术用途，不得用于商业应用。",
+    "proj.markflow.tagline": "一款轻巧、本地优先的 Markdown 编辑器。",
+    "proj.markflow.desc": "MarkFlow 是一款专注于本地文档写作与阅读的 Markdown 编辑器，支持源码与富文本编辑、实时预览、KaTeX 公式、表格、代码块、明暗主题、中英文界面，以及可选的 AI 文档翻译。",
+    "proj.markflow.mac": "macOS · Apple 芯片 · v0.1.2",
+    "proj.markflow.note": "无需 API key 即可在本地写作文档；翻译功能为可选项。",
 
     /* ---- cooking page ---- */
     "ck.intro": "我研发并在家实测过的原创菜谱合集，持续更新中。大多适合工作日晚上做，重在技法而非精确到克的配料。",
@@ -386,9 +431,18 @@ const I18N = {
       {
         title: "MarkFlow",
         desc: "一个用 vibe coding 做出来的 Markdown 编辑器，主要服务自己的写作流程，用来替代一些收费昂贵、体验不佳的商业软件。",
-        icon: "M",
+        logo: "assets/projects/markflow-logo.png",
         stack: ["Electron", "Markdown", "KaTeX", "macOS arm64"],
-        url: "https://github.com/decodermu/decodermu.github.io/releases/download/markflow-v0.1.2/MarkFlow-0.1.2-arm64.dmg"
+        updated: "2026-06-24",
+        url: "project-markflow.html"
+      },
+      {
+        title: "Emelia",
+        desc: "一个蛋白质序列 LLPS 相互作用分析平台，支持 PTM 注释与评分、双序列分析和 IDP 序列设计。",
+        logo: "assets/projects/emelia-logo.png",
+        stack: ["蛋白质 LLPS", "PTM", "IDP 设计", "macOS & Windows"],
+        updated: "2026-07-02",
+        url: "project-emelia.html"
       }
     ],
 

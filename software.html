@@ -18,8 +18,8 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Junxi Mu — small software tools and side projects, mostly vibe-coded." />
-  <title>Junxi Mu | Software</title>
+  <meta name="description" content="Junxi Mu — software and research projects." />
+  <title>Junxi Mu | Projects</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +37,7 @@
       <a href="index.html" data-i18n="nav.about">About</a>
       <a href="experience.html" data-i18n="nav.experience">Experience</a>
       <a href="research.html" data-i18n="nav.research">Research</a>
-      <a href="software.html" data-i18n="nav.software">Software</a>
+      <a href="software.html" data-i18n="nav.software">Projects</a>
       <a href="cooking.html" data-i18n="nav.cooking">Cooking</a>
     </nav>
     <div class="nav-actions">
@@ -53,12 +53,21 @@
   <!-- ===== Page hero ===== -->
   <section class="page-hero">
     <div class="page-kicker" data-i18n="page.sw.kicker">Building</div>
-    <h1 class="page-title" data-i18n="page.sw.title">Software</h1>
-    <p class="page-desc" data-i18n="page.sw.desc">Side projects and small tools — mostly vibe-coded, built for fun and utility.</p>
+    <h1 class="page-title" data-i18n="page.sw.title">Projects</h1>
+    <p class="page-desc" data-i18n="page.sw.desc">Software and research tools built for practical use.</p>
   </section>
 
   <!-- ===== Intro ===== -->
-  <div class="page-intro reveal"><p data-i18n="sw.intro">These are small tools I build in my spare time — usually vibe-coded with AI assistance, refined by hand, and shared because they're useful to me.</p></div>
+  <div class="page-intro reveal"><p data-i18n="sw.intro">A collection of software and research tools I build, refine, and use in my own work.</p></div>
+
+  <!-- ===== Project sorting ===== -->
+  <div class="project-toolbar reveal">
+    <label for="projectSort" data-i18n="sw.sort.label">Sort by</label>
+    <select id="projectSort">
+      <option value="updated" data-i18n="sw.sort.updated">Last updated</option>
+      <option value="name" data-i18n="sw.sort.name">Name</option>
+    </select>
+  </div>
 
   <!-- ===== Project grid (rendered by main.js) ===== -->
   <div class="card-grid" id="projectGrid"></div>

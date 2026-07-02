@@ -18,6 +18,7 @@
   }
 
   let currentLang = detectLang();
+  let currentProjectSort = "updated";
 
   function applyLang(lang) {
     currentLang = lang;
@@ -74,16 +75,34 @@
         </div>`;
       return;
     }
-    grid.innerHTML = projects.map((p) => {
+    const englishTitle = (title) => /^[A-Za-z0-9]/.test(title.trim());
+    const enCollator = new Intl.Collator("en", { sensitivity: "base", numeric: true });
+    const zhCollator = new Intl.Collator("zh-CN-u-co-pinyin", { sensitivity: "base", numeric: true });
+    const compareNames = (a, b) => {
+      const aEnglish = englishTitle(a.title);
+      const bEnglish = englishTitle(b.title);
+      if (aEnglish !== bEnglish) return aEnglish ? -1 : 1;
+      return (aEnglish ? enCollator : zhCollator).compare(a.title, b.title);
+    };
+    const sorted = [...projects].sort((a, b) => {
+      if (currentProjectSort === "name") return compareNames(a, b);
+      return (b.updated || "").localeCompare(a.updated || "") || compareNames(a, b);
+    });
+    const sortSelect = document.getElementById("projectSort");
+    if (sortSelect) sortSelect.value = currentProjectSort;
+    grid.innerHTML = sorted.map((p) => {
       const link = p.url
-        ? '<a class="card-link" href="' + p.url + '" target="_blank" rel="noopener">' + dict["sw.proj.more"] + "</a>"
+        ? '<a class="card-link" href="' + p.url + '">' + dict["sw.proj.more"] + "</a>"
         : '<span class="card-soon">' + dict["sw.proj.soon"] + "</span>";
-      const icon = p.icon ? '<div class="proj-icon">' + p.icon + "</div>" : "";
+      const icon = p.logo
+        ? '<div class="proj-icon"><img src="' + p.logo + '" alt="' + p.title + ' logo" width="44" height="44"></div>'
+        : (p.icon ? '<div class="proj-icon">' + p.icon + "</div>" : "");
       const stack = (p.stack || []).map((s) => '<span class="chip">' + s + "</span>").join("");
       return (
         '<article class="project-card reveal visible">' +
         '<div class="card-top">' + icon + '<span class="tag">' + dict["sw.proj.tag"] + "</span></div>" +
         "<h3>" + p.title + "</h3>" +
+        '<time class="project-update" datetime="' + p.updated + '">' + dict["sw.proj.updated"] + " " + p.updated + "</time>" +
         "<p>" + p.desc + "</p>" +
         '<div class="chips">' + stack + "</div>" +
         link +
@@ -134,6 +153,15 @@
     });
   }
 
+  const projectSort = document.getElementById("projectSort");
+  if (projectSort) {
+    projectSort.addEventListener("change", () => {
+      currentProjectSort = projectSort.value === "name" ? "name" : "updated";
+      const dict = I18N[currentLang] || I18N.en;
+      renderProjects(dict["_projects"] || [], dict);
+    });
+  }
+
   /* ---------- Nav: scrolled + active + mobile ---------- */
   const nav = document.getElementById("nav");
   const menuToggle = document.getElementById("menuToggle");
@@ -151,7 +179,7 @@
     const href = a.getAttribute("href");
     const isActive =
       (currentFile === "" || currentFile === "index.html") ? (href === "index.html" || href === "./" || href === "/")
-      : href === currentFile;
+      : href === currentFile || (currentFile.startsWith("project-") && href === "software.html");
     if (isActive) a.classList.add("active");
     a.addEventListener("click", () => {
       if (menuToggle) menuToggle.classList.remove("open");

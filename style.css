@@ -61,6 +61,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body {
   font-family: var(--sans);
@@ -348,6 +349,11 @@ img { max-width: 100%; display: block; }
 
 /* ===== Generic card grid (software / cooking) ===== */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; max-width: var(--max); margin: 0 auto; padding: 24px clamp(20px,5vw,48px) 80px; }
+.project-toolbar { max-width: var(--max); margin: 0 auto; padding: 16px clamp(20px,5vw,48px) 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
+.project-toolbar label { font-family: var(--mono); font-size: 12px; color: var(--text-dim); }
+.project-toolbar select { min-height: 44px; font-family: var(--mono); font-size: 13px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px 34px 8px 12px; cursor: pointer; transition: border-color .25s var(--ease), background .25s var(--ease); }
+.project-toolbar select:hover { border-color: var(--accent); background: var(--surface-2); }
+.project-toolbar select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .project-card, .recipe-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
@@ -362,11 +368,28 @@ img { max-width: 100%; display: block; }
 .project-card:hover::after, .recipe-card:hover::after { opacity: 1; }
 .card-top { display: flex; align-items: center; justify-content: space-between; }
 .proj-icon { width: 44px; height: 44px; border-radius: 10px; display: grid; place-items: center; color: var(--accent); background: var(--accent-soft-bg); border: 1px solid var(--accent-soft-border); }
+.proj-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: 9px; }
 .tag { font-family: var(--mono); font-size: 11px; color: var(--accent); background: var(--accent-soft-bg); border: 1px solid var(--accent-soft-border); padding: 3px 8px; border-radius: 6px; }
 .project-card h3, .recipe-card h3 { font-size: 17px; font-weight: 600; }
 .project-card p, .recipe-card p { font-size: 14px; color: var(--text-dim); }
+.project-update, .project-updated { font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
 .card-link { font-family: var(--mono); font-size: 13px; color: var(--accent); margin-top: auto; }
 .card-soon { font-family: var(--mono); font-size: 12px; color: var(--text-faint); margin-top: auto; padding: 4px 0; }
+
+/* project detail content reuses the site's existing card language */
+.project-detail { max-width: var(--max); margin: 0 auto; padding: 24px clamp(20px,5vw,48px) 80px; display: grid; gap: 20px; }
+.project-overview { display: grid; grid-template-columns: 88px 1fr; gap: 22px; align-items: center; }
+.project-logo { width: 88px; height: 88px; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+.project-copy h2 { font-size: 24px; margin-bottom: 6px; }
+.project-copy p { color: var(--text-dim); }
+.project-screen { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; }
+.project-screen img { width: 100%; border-radius: 10px; border: 1px solid var(--border); }
+.download-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.download-card h2 { font-size: 20px; margin-bottom: 14px; }
+.download-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.download-link { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--mono); font-size: 13px; color: var(--accent); background: var(--accent-soft-bg); border: 1px solid var(--accent-soft-border); padding: 9px 14px; border-radius: 8px; transition: all .25s var(--ease); }
+.download-link:hover { border-color: var(--accent); transform: translateY(-1px); }
+.project-note { margin-top: 12px; font-size: 13px; color: var(--text-faint); }
 
 /* recipe image header */
 .recipe-img { height: 150px; border-radius: 10px; background: var(--surface-2); background-size: cover; background-position: center; display: grid; place-items: center; margin: -4px -4px 4px; }
@@ -414,6 +437,8 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 480px) {
   .portal-grid, .card-grid { grid-template-columns: 1fr; }
+  .project-overview { grid-template-columns: 64px 1fr; gap: 16px; }
+  .project-logo { width: 64px; height: 64px; border-radius: 15px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
